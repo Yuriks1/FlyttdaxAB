@@ -5,8 +5,19 @@
       <map>
         <entry key="..\:/Users/juris/AndroidStudioProjects/FlyttdaxAB/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.124" />
         <entry key="..\:/Users/juris/AndroidStudioProjects/FlyttdaxAB/app/src/main/res/drawable/ic_launcher_background.xml" value="0.106" />
+        <entry key="..\:/Users/juris/AndroidStudioProjects/FlyttdaxAB/app/src/main/res/layout/activity_ai_choose_symbol.xml" value="0.14749893116716545" />
+        <entry key="..\:/Users/juris/AndroidStudioProjects/FlyttdaxAB/app/src/main/res/layout/activity_ai_game.xml" value="0.14749893116716545" />
+        <entry key="..\:/Users/juris/AndroidStudioProjects/FlyttdaxAB/app/src/main/res/layout/activity_aiget_player_name.xml" value="0.14749893116716545" />
+        <entry key="..\:/Users/juris/AndroidStudioProjects/FlyttdaxAB/app/src/main/res/layout/activity_camera.xml" value="0.14749893116716545" />
+        <entry key="..\:/Users/juris/AndroidStudioProjects/FlyttdaxAB/app/src/main/res/layout/activity_choose_symbol.xml" value="0.14749893116716545" />
         <entry key="..\:/Users/juris/AndroidStudioProjects/FlyttdaxAB/app/src/main/res/layout/activity_main.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/juris/AndroidStudioProjects/FlyttdaxAB/app/src/main/res/layout/activity_offline_game_menu.xml" value="0.14749893116716545" />
         <entry key="..\:/Users/juris/AndroidStudioProjects/FlyttdaxAB/app/src/main/res/layout/activity_profilr.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/juris/AndroidStudioProjects/FlyttdaxAB/app/src/main/res/layout/activity_settings.xml" value="0.14749893116716545" />
+        <entry key="..\:/Users/juris/AndroidStudioProjects/FlyttdaxAB/app/src/main/res/layout/celebrate_dialog.xml" value="0.14749893116716545" />
+        <entry key="..\:/Users/juris/AndroidStudioProjects/FlyttdaxAB/app/src/main/res/layout/draw_dialog.xml" value="0.14749893116716545" />
+        <entry key="..\:/Users/juris/AndroidStudioProjects/FlyttdaxAB/app/src/main/res/layout/quit_dialog.xml" value="0.14749893116716545" />
+        <entry key="..\:/Users/juris/AndroidStudioProjects/FlyttdaxAB/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.128" />
       </map>
     </option>
   </component>

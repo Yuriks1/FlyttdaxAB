@@ -3,9 +3,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.flyttdaxab">
 
-    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="18" />
+
 
     <application
+
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -16,6 +23,23 @@
         android:theme="@style/Theme.FlyttdaxAB"
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
+        <meta-data
+            android:name="com.google.android.actions"
+            android:resource="@xml/file_paths" />
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.example.flyttdaxab.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+
+        <activity
+            android:name=".CameraActivity"
+            android:exported="true"/>
         <activity
             android:name=".ProfileActivity"
             android:exported="false" />

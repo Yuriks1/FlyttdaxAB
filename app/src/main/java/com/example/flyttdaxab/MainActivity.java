@@ -17,7 +17,6 @@ import com.google.firebase.auth.AuthCredential;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
-
 import java.util.Objects;
 
 public class MainActivity extends AppCompatActivity {
@@ -33,10 +32,13 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        com.example.flyttdaxab.databinding.ActivityMainBinding binding = ActivityMainBinding.inflate(getLayoutInflater());
+        com.example.flyttdaxab.databinding
+                .ActivityMainBinding binding = ActivityMainBinding
+                .inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         //configure google sign in
-        GoogleSignInOptions googleSignInOptions = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+        GoogleSignInOptions googleSignInOptions = new GoogleSignInOptions
+                .Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestIdToken(getString(R.string.default_web_client_id))
                 .requestEmail()
                 .build();
@@ -54,11 +56,9 @@ public class MainActivity extends AppCompatActivity {
             Log.d(TAG, "onClick: begin Google Signin");
             Intent intent = googleSignInClient.getSignInIntent();
             startActivityForResult(intent, RC_SIGN_IN);
-
         });
-
-
     }
+
 
     private void checkUser() {
         // if user is already signed in , then go to profile acticity
@@ -94,7 +94,8 @@ public class MainActivity extends AppCompatActivity {
 
     private void FireBaseAuthWithGoogleAccount(GoogleSignInAccount account) {
         Log.d(TAG, "FireBaseAuthWithGoogleAccount: begin firebase auth with google account ");
-        AuthCredential credential = GoogleAuthProvider.getCredential(account.getIdToken(),null);
+        AuthCredential credential = GoogleAuthProvider
+                .getCredential(account.getIdToken(),null);
         firebaseAuth.signInWithCredential(credential)
                 .addOnSuccessListener(authResult -> {
                     // login success
@@ -115,21 +116,18 @@ public class MainActivity extends AppCompatActivity {
                     if(Objects.requireNonNull(authResult.getAdditionalUserInfo()).isNewUser()){
                         // if user is new - account created
                         Log.d(TAG, "onSuccess: Account Created ...\n" + email );
-                        Toast.makeText(MainActivity.this, "Account Created ...\n" + email, Toast.LENGTH_SHORT).show();
+                        Toast.makeText(MainActivity.this, "Account Created ...\n" + email,
+                                Toast.LENGTH_SHORT).show();
                     }else {
                         //Existing user - logged in
                         Log.d(TAG, "onSuccess:  Existing user...\n "+ email);
-                        Toast.makeText(MainActivity.this, "Existing user...\n "+ email, Toast.LENGTH_SHORT).show();
+                        Toast.makeText(MainActivity.this, "Existing user...\n "+ email,
+                                Toast.LENGTH_SHORT).show();
                     }
 
                     //start profile activity
-
                     startActivity(new Intent(MainActivity.this, ProfileActivity.class));
                     finish();
-
-
-
-
 
                 })
                 .addOnFailureListener(e -> {

@@ -15,8 +15,6 @@ public class ProfileActivity extends AppCompatActivity {
 
     private FirebaseAuth firebaseAuth;
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,12 +32,21 @@ public class ProfileActivity extends AppCompatActivity {
             firebaseAuth.signOut();
             checkUser();
         });
+
+        binding.toCamera.setOnClickListener(v->{
+            startCamera();
+        });
+
+    }
+
+    private void startCamera() {
+        Intent intent = new Intent(this, CameraActivity.class);
+        this.startActivity ( intent );
     }
 
     private void checkUser() {
 
         // get current user
-
         FirebaseUser firebaseUser = firebaseAuth.getCurrentUser();
         if(firebaseUser == null){
             //user not logged in

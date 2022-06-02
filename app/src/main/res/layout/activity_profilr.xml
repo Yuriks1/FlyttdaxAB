@@ -29,5 +29,19 @@
         android:layout_marginTop="20dp"
         android:text="Logout"/>
 
+    <Button
+        android:id="@+id/toGame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="To Game"/>
+
+    <Button
+        android:id="@+id/toCamera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Take a picture"/>
+
 
 </LinearLayout>
